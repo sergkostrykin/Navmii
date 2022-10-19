@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="6ZF-nX-XJH">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="6je-4e-Sxc" customClass="MapViewController" customModule="Navmii" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tWX-f5-0cu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-gi-K1h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URt-3m-HTN">
+                                <rect key="frame" x="0.0" y="856" width="414" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iwT-xl-sKf"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-xX-RNA">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWr-TI-dM5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-8A-xHm">
+                                                <rect key="frame" x="364" y="0.0" width="50" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="hXV-8e-3K2"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="bottomPanelRightButtonClicked:" destination="6je-4e-Sxc" eventType="touchUpInside" id="4Pv-Du-aoM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Ewe-AO-UW0"/>
+                                            <constraint firstAttribute="trailing" secondItem="hrN-8A-xHm" secondAttribute="trailing" id="R3k-Pv-c9X"/>
+                                            <constraint firstAttribute="bottom" secondItem="hrN-8A-xHm" secondAttribute="bottom" id="edn-ZX-a1N"/>
+                                            <constraint firstItem="hrN-8A-xHm" firstAttribute="top" secondItem="tWr-TI-dM5" secondAttribute="top" id="f3I-Qr-BFw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="WIq-8S-uJS" appends="YES" id="pCC-EO-GdW"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-wY-SLI">
+                                        <rect key="frame" x="187" y="5" width="40" height="5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="bIj-IZ-7nl"/>
+                                            <constraint firstAttribute="width" constant="40" id="oRA-C0-eHM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="9RN-wY-SLI" firstAttribute="centerX" secondItem="WUh-xX-RNA" secondAttribute="centerX" id="D8H-Yn-Ur2"/>
+                                    <constraint firstAttribute="height" constant="60" id="Npq-xB-N53"/>
+                                    <constraint firstItem="9RN-wY-SLI" firstAttribute="top" secondItem="WUh-xX-RNA" secondAttribute="top" constant="5" id="Ykg-S5-jaX"/>
+                                    <constraint firstAttribute="trailing" secondItem="tWr-TI-dM5" secondAttribute="trailing" id="dlN-gr-YQg"/>
+                                    <constraint firstItem="tWr-TI-dM5" firstAttribute="leading" secondItem="WUh-xX-RNA" secondAttribute="leading" id="khO-bx-zWM"/>
+                                    <constraint firstItem="tWr-TI-dM5" firstAttribute="top" secondItem="WUh-xX-RNA" secondAttribute="top" id="m8M-u8-VdF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KZM-tH-n5X" appends="YES" id="w1u-fE-gaK"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xus-W9-RfH" appends="YES" id="7ak-mU-dIr"/>
+                                    <outletCollection property="gestureRecognizers" destination="4az-4t-Fpm" appends="YES" id="Ydo-q3-gl2"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nwj-1x-bbr"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s2W-gi-K1h" firstAttribute="leading" secondItem="tWX-f5-0cu" secondAttribute="leading" id="1WC-Yz-p5z"/>
+                            <constraint firstAttribute="bottom" secondItem="WUh-xX-RNA" secondAttribute="bottom" id="HN3-r9-n5Y"/>
+                            <constraint firstItem="s2W-gi-K1h" firstAttribute="top" secondItem="tWX-f5-0cu" secondAttribute="top" id="Sf5-ne-DRH"/>
+                            <constraint firstAttribute="bottom" secondItem="s2W-gi-K1h" secondAttribute="bottom" id="WYs-r2-IUI"/>
+                            <constraint firstItem="URt-3m-HTN" firstAttribute="leading" secondItem="tWX-f5-0cu" secondAttribute="leading" id="Zxs-44-W4Y"/>
+                            <constraint firstAttribute="bottom" secondItem="URt-3m-HTN" secondAttribute="bottom" id="eZd-mN-Hg3"/>
+                            <constraint firstItem="WUh-xX-RNA" firstAttribute="leading" secondItem="tWX-f5-0cu" secondAttribute="leading" id="nCz-y6-5ZY"/>
+                            <constraint firstAttribute="trailing" secondItem="URt-3m-HTN" secondAttribute="trailing" id="ooC-lm-3eY"/>
+                            <constraint firstAttribute="trailing" secondItem="s2W-gi-K1h" secondAttribute="trailing" id="uPT-hC-hMM"/>
+                            <constraint firstAttribute="trailing" secondItem="WUh-xX-RNA" secondAttribute="trailing" id="ypK-22-0Pj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomPanelHeightConstraint" destination="Npq-xB-N53" id="Bad-0E-p27"/>
+                        <outlet property="bottomPanelTapView" destination="tWr-TI-dM5" id="jIO-wZ-MCe"/>
+                        <outlet property="bottomPanelTopBar" destination="9RN-wY-SLI" id="dGQ-CT-b3f"/>
+                        <outlet property="bottomPanelView" destination="WUh-xX-RNA" id="Ito-a3-toI"/>
+                        <outlet property="mapContainerView" destination="s2W-gi-K1h" id="wpn-Bo-QhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8X-Vb-xc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="KZM-tH-n5X" userLabel="Down Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="bottomPanelSwipedDown:" destination="6je-4e-Sxc" id="hcP-l8-sfB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Xus-W9-RfH" userLabel="Up Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="bottomPanelSwipedUp:" destination="6je-4e-Sxc" id="OrV-XR-g9C"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="WIq-8S-uJS">
+                    <connections>
+                        <action selector="bottomPanelTapped:" destination="6je-4e-Sxc" id="nIC-y4-36N"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4az-4t-Fpm">
+                    <connections>
+                        <action selector="bottonPanlePanGestureTriggered:" destination="6je-4e-Sxc" id="LOG-cp-C1t"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4592.753623188406" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+</document>
